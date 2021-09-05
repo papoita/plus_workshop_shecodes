@@ -37,6 +37,18 @@ weekDays.forEach(function(weekDaysElement){
 
 
 
+console.log(`Temperature on ${weekdays[0]} is 18 degrees`);
+console.log(`Temperature on ${weekdays[1]} is 18 degrees`);
+console.log(`Temperature on ${weekdays[2]} is 18 degrees`);
+console.log(`Temperature on ${weekdays[3]} is 18 degrees`);
+console.log(`Temperature on ${weekdays[4]} is 18 degrees`);
+
+
+
+function showTemperature(weekDaysElement){
+  console.log(`Temperature on ${weekDaysElement} is 18 degrees`);
+}
+weekDays.forEach(showTemperature);
 
   </script>
 </body>
