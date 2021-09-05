@@ -1,0 +1,81 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>JS Data Types</h1>
+		<script>
+			let country = "Colombia";
+			let continent = "  America ";
+			continent = continent
+				.trim()
+				.replace("America", "South America")
+
+				.toUpperCase();
+			console.log(`I love to live in ${country}, ${continent}`);
+
+			let city1 = "Montreal";
+			console.log("From " + city1);
+			city1 = city1.replace("e", "é");
+			console.log("Changed To " + city1);
+
+			let city2 = "Montreal";
+			console.log("From " + city2);
+			city2 = city2.toLowerCase();
+			console.log("lower case" + city2);
+			city3 = city2.toUpperCase();
+			console.log("uppercase" + city3);
+
+			let nickname = "Papo";
+			console.log("from" + nickname);
+			nickname = nickname.trim().replace("Papo", "Papoita").toUpperCase();
+			console.log("to" + nickname);
+
+			let zipcode = 6182;
+
+			let cold = false;
+
+			let x = 1;
+			let y = 3;
+			let name = "Will";
+
+			let firstName = prompt("What is your name?");
+			firstName = firstName.trim();
+			if (firstName.length > 0) {
+				alert("Welcome " + firstName + " !");
+			} else {
+				alert("Too bad for you");
+			}
+
+			let temperature = 18.5;
+			if (temperature > 15) {
+				alert("It is a warm day");
+			}
+
+			let year = prompt("What year is it?");
+			let month = prompt("What month is it?");
+			let date = year + " " + month;
+			alert(date);
+
+			let age = 23;
+			if (age < 18 || age >= 90) {
+				alert("you can't drive");
+			} else {
+				alert("you can drive");
+			}
+
+			if (continent === "Europe" && language === "Portuguese") {
+				alert("You are from Portugal");
+			}
+			if (continent === "Europe" && language === "Portuguese") {
+				alert("You are from Portugal");
+			}
+		</script>
+	</body>
+</html>
