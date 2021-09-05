@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p{
+      color:blue;
+    }
+  </style>
+</head>
+
+<body>
+    <h1>
+    JS Arrays and Loops
+    
+  </h1>
+  <ul>
+    <li>
+      Paris
+    </li>
+    <li>
+      Roma
+    </li>
+    <li>
+      Barcelona
+    </li>
+  </ul>
+
+  <p>
+    Colombia
+  </p>
+  <p>
+    Canada
+  
+  </p>
+  <p>
+    Italy
+  </p>
+
+  <script>
+let name = "Paola";
+let cities1=["NY", "Moscow", "Paris", "Bogota"]
+let names =[]; 
+cities1.length;
+cities1[0];
+cities1.length;
+cities1[1] = "London";
+cities1[4] = "Barcelona";
+
+console.log(cities1);
+
+
+
+function showCity(city){
+  console.log(city);
+}
+let cities2 = ["Cape town", "Bogota", "Berlin"]
+cities2.forEach(showCity);
+
+
+function showCity(cityElement){
+  console.log(cityElement.innerHTML);
+}
+
+let cities = document.querySelectorAll("li");
+cities.forEach(showCity)
+
+let fruits = ['apples', 'oranges', 'bananas'];
+fruits.forEach(function(fruit) {
+  alert("I have " + fruit + " in my shopping bag");
+});
+
+
+function showCountries(countriesElement){
+  countriesElement.innerHTML = "<em>" + countriesElement.innerHTML + "</em";
+}
+let countries = document.querySelectorAll("p");
+countries.forEach(showCountries);
+
+
+  </script>
+  
+</body>
+</html>
