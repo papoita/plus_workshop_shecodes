@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>JavaScript Objects vs Arrays</h1>
+
+    <h3>JS Challenge 1</h3>
+    <p>Given an object called paris, log its temperature</p>
+
+    <h3>JS Challenge 2</h3>
+    <p>
+      Create an object called sydney similar to paris and log its temperature
+      (use fake data)
+    </p>
+    <h3>JS Challenge 3</h3>
+    <p>
+      Create an array with 3 different Australian city names only and log each
+      name
+    </p>
+
+    <h3>JS Challenge 4</h3>
+    <p>
+      Create an array of 3 cities with the same properties as paris and console
+      log each city temperature
+    </p>
+
+  
+  <script>
+    let paris = {
+  name: "Paris",
+  country: "France",
+  language: "French",
+  temperature: 18,
+  capitalCity: true
+};
+console.log(paris.temperature);
+
+let sydney = {
+  name: "Sydney",
+  country: "Australia",
+  language: "English",
+  temperature: 28,
+  capitalCity: true
+};
+
+console.log(sydney.temperature);
+
+let australianCities = ["Melbourne", "Sydney", "Brisbane"];
+
+console.log(australianCities);
+
+let cities = [
+  {name: "Paris",
+  country: "France",
+  language: "French",
+  temperature: 18,
+  capitalCity: true
+},
+
+  {
+  name: "Ottawa",
+  country: "Canada",
+  language: "English",
+  temperature: 28,
+  capitalCity: true
+  },
+  {
+  name: "Marseille",
+  country: "France",
+  language: "French",
+  temperature: 34,
+  capitalCity: false
+  },
+]
+
+console.log(cities[0].temperature);
+console.log(cities[1].temperature);
+console.log(cities[2].temperature);
+
+
+  </script>
+</body>
+</html>
