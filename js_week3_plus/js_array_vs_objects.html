@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>
+    Array vs objects
+</h1>
+<h2>
+    array is a collection of items of the same type (integers,numbers, strings)
+    use square brackets
+    organized order is important
+
+    objects more complex data structure that can have dif types of information or dif properties
+    use curly brackets
+    JSON js object notation when using apis
+
+  </h2>
+  <script>
+
+let temperatures = [ 12, 15, -5, 0];
+let cities = ["lisbon", "Paris", "Lisbon" ];
+
+let person ={
+  firstName: "Paola",
+  lastName: "Perez",
+  height: 164,
+gender: "female",
+
+};
+console.log(person.firstName);
+
+let person2 = {
+  name:{first:"Sebastian", last:"Perez"},
+  hobbies: ["traveling", "Singing", "tennis"]
+};
+console.log(person2.name.last);
+console.log(person2.hobbies[2]);
+
+
+
+  </script>
+</body>
+</html>
