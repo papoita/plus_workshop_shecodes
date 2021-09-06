@@ -46,6 +46,59 @@ let cities = [
 console.log(cities);
 
 console.log(cities[1].name);
+console.log(cities[2].country);
+
+//let fruit = new Object(); // "object constructor" syntax
+//let fruit = {};  // "object literal" syntax
+
+
+
+let user1 = {
+  firstName: "Paola",
+  lastName: "Perez",
+  male: false,
+  age: 32,
+  greet: function() {
+    console.log('hi');
+  }
+}
+
+console.log( user1.firstName ); // John
+console.log( user1.age ); // 30
+
+user1.isAdmin = true;
+
+let user2 = {
+  firstName: "Lady",
+  lastName: "Gaga",
+  gender: "female"
+}
+
+
+console.log( user2["name"] ); // John
+console.log( user2["age"] ); // 30
+
+for(let prop in user2) {
+  alert(prop); // firstName, lastName, gender
+  alert(user2[prop]); // 'Lady', 'Gaga', 'female'
+}
+
+let users = [
+  {
+    firstName: 'Bradley',
+    lastName: 'Cooper',
+  },
+  {
+    firstName: 'Lady',
+    lastName: 'Gaga'
+  }
+];
+
+users.forEach(function(user, index) {
+  for(let prop in user) {
+    alert(prop + ' is ' + user[prop]);
+  }
+});
   </script>
 </body>
 </html>
