@@ -10,6 +10,22 @@
 	</head>
 	<body>
 		<h1>functions return</h1>
-		<script></script>
+		<script>
+			function add(x, y) {
+				return x + y;
+			}
+
+			let result = add(3, 4);
+			let result2 = add(result, 0);
+
+			function getFullName(firstName, lastName) {
+				let fullName = firstName + " " + lastName;
+				return fullName;
+			}
+
+			let userFullName = getFullName("Matt", "Delac");
+			alert(userFullName);
+			alert(getFullName("Sarah", "Gaillard"));
+		</script>
 	</body>
 </html>
