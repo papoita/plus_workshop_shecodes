@@ -11,6 +11,23 @@
 	<body>
 		<h1>functions return</h1>
 		<script>
+			function welcomeUser(temperature, firstName) {
+				if (temperature > 15) {
+					alert(`It is a warm day today, ${name}`);
+				}
+			}
+			welcomeUser(20, "John");
+
+			function isCold(temperature) {
+				if (temperature > 10) {
+					return false;
+				} else {
+					return true;
+				}
+			}
+			let cold = isCold(10);
+			alert(cold);
+
 			function add(x, y) {
 				return x + y;
 			}
