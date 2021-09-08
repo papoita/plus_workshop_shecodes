@@ -29,19 +29,19 @@
 			fullName(firstName, lastName);
 			fullName("Paola", "Perez");
 
-			function welcomeUser(temperature) {
+			function welcomeUser(temperature, name, age) {
 				if (temperature > 15) {
-					alert(`It is a warm day`);
+					alert(`It is a warm day,  ${name}, ${age}`);
 				} else {
-					alert(`It is a cold day`);
+					alert(`It is a cold day, ${name}, ${age}`);
 				}
 			}
 
 			let currentTemperature = 10;
-			welcomeUser(currentTemperature);
-			welcomeUser(15);
-			welcomeUser(2);
-			welcomeUser(7);
+			welcomeUser(currentTemperature, "paola", 31);
+			welcomeUser(15, "John", 12);
+			welcomeUser(2, "Ju", 3);
+			welcomeUser(7, "yery", 56);
 		</script>
 	</body>
 </html>
