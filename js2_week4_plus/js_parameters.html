@@ -49,6 +49,7 @@
 			welcomeUser(7, "yery", 56);
 
 			function isWindy(speed) {
+				alert(speed);
 				if (speed > 5) {
 					alert(`It is windy`);
 				} else {
@@ -57,6 +58,8 @@
 			}
 			isWindy(2);
 			isWindy(10);
+			let currentSpeed = prompt(`What is the wind speed?`);
+			isWindy(currentSpeed);
 		</script>
 	</body>
 </html>
