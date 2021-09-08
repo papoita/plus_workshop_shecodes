@@ -29,11 +29,16 @@
 			fullName(firstName, lastName);
 			fullName("Paola", "Perez");
 
-			function welcomeUser(temperature, name, age) {
+			function greetUser(name) {
+				alert(name);
+			}
+
+			function welcomeUser(temperature, firstName, age) {
+				greetUser(firstName);
 				if (temperature > 15) {
-					alert(`It is a warm day,  ${name}, ${age}`);
+					alert(`It is a warm day, ${age}`);
 				} else {
-					alert(`It is a cold day, ${name}, ${age}`);
+					alert(`It is a cold day, ${age}`);
 				}
 			}
 
