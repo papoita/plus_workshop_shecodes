@@ -51,6 +51,17 @@
 			let userFullName = getFullName("Matt", "Delac");
 			alert(userFullName);
 			alert(getFullName("Sarah", "Gaillard"));
+
+			function isWindy(speed, unit) {
+				if (speed > 5 || unit === "metric") {
+					return true;
+				} else {
+					return false;
+				}
+			}
+
+			isWindy(2, "imperial");
+			isWindy(20, "metric");
 		</script>
 	</body>
 </html>

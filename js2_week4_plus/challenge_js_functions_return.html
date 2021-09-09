@@ -1,0 +1,56 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			// Challenge 1
+			// 1. Modify the function is Windy and return true if the speed is greater than 5 and false if not
+			// 2. Call the function and alert ‘It is windy’ if it is windy, Else, alert ‘It is not windy’
+
+			function isWindy(speed, unit) {
+				if (speed > 5) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+
+			isWindy(10);
+
+			function isWindy1(speed, unit) {
+				if (speed > 5) {
+					alert(`It is windy`);
+				} else {
+					alert(`It is not windy`);
+				}
+			}
+
+			isWindy1(2);
+
+			// Challenge 2
+			// 1. Add unit parameter to isWindy
+			// 2. if greater than 5 and unit is metric, return true, else return false
+			// 3. Test both scenarios
+			// isWindy(2, 'imperial') should return false
+			// isWindy(20, 'metric') should return true
+
+			function isWindy2(speed, unit) {
+				if (speed > 5 || unit === "metric") {
+					return true;
+				} else {
+					return false;
+				}
+			}
+
+			isWindy2(2, "imperial");
+			isWindy2(20, "metric");
+		</script>
+	</body>
+</html>
