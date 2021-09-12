@@ -36,7 +36,11 @@ let year = now.getFullYear();
 let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let day = days[now.getDay()]; //0 and 6
 
-h2.innerHTML = `${day} Aug ${date}, ${hours}, ${minutes}, ${year}`;
+let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+let month = months[now.getMonth()];
+
+h2.innerHTML = `${day} ${month} ${date}, ${hours}, ${minutes}, ${year}`;
+
 
   </script>
 </body>
