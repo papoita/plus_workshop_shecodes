@@ -9,8 +9,13 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<h1>JS SELECTORS</h1>
+		<h1>
+			JS SELECTORS
+			<span class="emoji"> 🐛</span>
+			<span class="emoji"> 🐝</span>
+		</h1>
 		<h2>Js changing html</h2>
+
 		<script>
 			let heading = document.querySelector("h1");
 			console.log(heading);
@@ -18,6 +23,12 @@
 			let heading2 = document.querySelector("h2");
 			console.log(heading2);
 			heading2.innerHTML = "JS selector is working";
+
+			let emoji = document.querySelector("h1 .emoji");
+			console.log(emoji);
+			emoji.innerHTML = "=)";
+
+			//If wanted to select one emoji, it will choose the first only
 		</script>
 	</body>
 </html>
