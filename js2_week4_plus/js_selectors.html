@@ -15,6 +15,7 @@
 			<span class="emoji"> 🐝</span>
 		</h1>
 		<h2>Js changing html</h2>
+		<span class="emoji" id="selector-emoji"> 🐛</span>
 
 		<script>
 			let heading = document.querySelector("h1");
@@ -29,6 +30,10 @@
 			emoji.innerHTML = "=)";
 
 			//If wanted to select one emoji, it will choose the first only
+
+			let emojis = document.querySelector("#selector-emoji");
+			console.log(emojis);
+			emojis.innerHTML = "🎰";
 		</script>
 	</body>
 </html>
