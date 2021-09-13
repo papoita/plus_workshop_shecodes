@@ -1,0 +1,25 @@
+<!-- @format -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Functions</title>
+	</head>
+	<body>
+		<h1>JS Events and Selectors</h1>
+		<button id="weather-button">Show Weather</button>
+
+		<script>
+			function handleClick() {
+				alert("It is 15 degrees");
+			}
+
+			let showWeatherButton = document.querySelector("#weather-button");
+			showWeatherButton.addEventListener("click", handleClick);
+			//for js it is better to use id's, they are called using #
+			//for css use classes..
+		</script>
+	</body>
+</html>
