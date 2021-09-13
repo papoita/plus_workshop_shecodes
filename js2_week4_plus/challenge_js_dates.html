@@ -66,11 +66,16 @@
 		</p>
 
 		<script>
-			let now = new Date();
-			console.log(now);
+			let currentTime = new Date();
+			console.log(currentTime);
+			console.log(currentTime.getMilliseconds());
+			console.log(currentTime.getDay());
 
-			console.log(now.getMilliseconds);
-			let year = now.getFullYear();
+			console.log(currentTime.getFullYear());
+			console.log(currentTime.getMonth());
+
+			let currentYear = currentTime.getFullYear();
+			let date = currentTime.getDate();
 
 			let days = [
 				"Sunday",
@@ -81,8 +86,7 @@
 				"Friday",
 				"Saturday",
 			];
-			let day = days[now.getUTCDay()];
-			console.log(day);
+			let day = days[currentTime.getUTCDay()];
 
 			let months = [
 				"January",
@@ -98,9 +102,7 @@
 				"November",
 				"December",
 			];
-			let month = months[now.getMonth()];
-			console.log(month);
-			let date = now.getDate();
+			let month = months[currentTime.getMonth()];
 
 			let div = document.querySelector("div");
 			div.innerHTML = `Today is ${day}, ${month} ${date}, ${year}`;
