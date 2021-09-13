@@ -107,8 +107,7 @@
 			let div = document.querySelector("div");
 			div.innerHTML = `Today is ${day}, ${month} ${date}, ${year}`;
 
-			function formatDate() {
-				let currentTime = new Date();
+			function formatDate(date) {
 				let days = [
 					"Sunday",
 					"Monday",
@@ -118,7 +117,6 @@
 					"Friday",
 					"Saturday",
 				];
-				let day = days[currentTime.getUTCDay()];
 
 				let months = [
 					"January",
@@ -134,17 +132,19 @@
 					"November",
 					"December",
 				];
-				let month = months[currentTime.getMonth()];
 
-				let date = currentTime.getDate();
+				let currentDay = days[date.getUTCDay()];
+				let currentMonth = months[date.getMonth()];
 
-				let year = currentTime.getFullYear();
+				let currentDate = date.getDate();
+
+				let currentYear = date.getFullYear();
 
 				let today = `Today is ${day}, ${month} ${date}, ${year}`;
 				return today;
 			}
 
-			console.log(formatDate());
+			console.log(formatDate(currentTime));
 		</script>
 	</body>
 </html>
