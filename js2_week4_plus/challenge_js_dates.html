@@ -52,10 +52,10 @@
 		<p>Log the current month</p>
 
 		<h3>JS Challenge 6</h3>
-		<p>
+		<div>
 			Display the current date following the following format: Today is
 			Thursday, April 4, 2020
-		</p>
+		</div>
 
 		<h3>JS Challenge 7</h3>
 		<p>
@@ -68,6 +68,82 @@
 		<script>
 			let now = new Date();
 			console.log(now);
+
+			console.log(now.getMilliseconds);
+			let year = now.getFullYear();
+
+			let days = [
+				"Sunday",
+				"Monday",
+				"Tuesday",
+				"Wednesday",
+				"Thursday",
+				"Friday",
+				"Saturday",
+			];
+			let day = days[now.getUTCDay()];
+			console.log(day);
+
+			let months = [
+				"January",
+				"February",
+				"March",
+				"April",
+				"May",
+				"June",
+				"July",
+				"August",
+				"September",
+				"October",
+				"November",
+				"December",
+			];
+			let month = months[now.getMonth()];
+			console.log(month);
+			let date = now.getDate();
+
+			let div = document.querySelector("div");
+			div.innerHTML = `Today is ${day}, ${month} ${date}, ${year}`;
+
+			function formatDate(newDate) {
+				return `${day}, ${month} ${date}, ${year}`;
+			}
+
+			function newDate(day, month, date, year) {
+				let days = [
+					"Sunday",
+					"Monday",
+					"Tuesday",
+					"Wednesday",
+					"Thursday",
+					"Friday",
+					"Saturday",
+				];
+				let day = days[now.getUTCDay()];
+				return day;
+				let months = [
+					"January",
+					"February",
+					"March",
+					"April",
+					"May",
+					"June",
+					"July",
+					"August",
+					"September",
+					"October",
+					"November",
+					"December",
+				];
+				let month = months[now.getMonth()];
+
+				return month;
+				let date = now.getDate();
+				return date;
+				let year = now.getFullYear;
+			}
+
+			console.log(formatDate(new Date()));
 		</script>
 	</body>
 </html>
