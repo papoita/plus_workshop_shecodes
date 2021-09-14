@@ -5,9 +5,17 @@
 	<head>
 		<title>SheCodes Plus Functions</title>
 		<meta charset="UTF-8" />
-		<link rel="stylesheet" href="src/styles.css" />
 	</head>
+	<style>
+		body {
+			font-family: sans-serif;
+		}
 
+		.special {
+			color: red;
+			font-size: 46px;
+		}
+	</style>
 	<body>
 		<h1>SheCodes Plus / Selectors</h1>
 		<div id="app"></div>
@@ -18,6 +26,10 @@
 			<li class="country" id="special">Portugal 🇵🇹</li>
 		</ul>
 
-		<script src="src/index.js"></script>
+		<script>
+			let special = document.querySelectorAll("#special");
+
+			console.log(special);
+		</script>
 	</body>
 </html>
