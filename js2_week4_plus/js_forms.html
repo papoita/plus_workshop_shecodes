@@ -25,7 +25,8 @@
 		<script>
 			function search(event) {
 				event.preventDefault();
-				alert("searching");
+				let searchInput = document.querySelector("#search-text-input");
+				console.log(searchInput.value);
 			}
 
 			let form = document.querySelector("#search-form");
