@@ -89,15 +89,15 @@ h3 {
         event.preventDefault();
         let psinput = document.querySelector("#password-input");
         console.log(psinput.value);
-        alert(psinput.value);
+        alert(`${psinput.value}`);
 
       }
       let passwordInput = document.querySelector("#password-form");
       passwordInput.addEventListener("submit", psInput);
 
       //challenge 3
-function signUp (){
-   //event.preventDefault();
+function signUp (event){
+   event.preventDefault();
    let email = document.querySelector("#email-input");
    console.log(email.value);
 
