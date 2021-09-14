@@ -17,6 +17,7 @@
 				>Events</a
 			>
 		</h1>
+		<a href="" id="follow"> Follow</a>
 		<p>click mouseenter mouseleave mousedown mouseup mousemove keydown keyup</p>
 		<script>
 			function stopClick(event) {
@@ -27,6 +28,15 @@
 			let heading = document.querySelector("#event-link");
 			console.log(heading);
 			heading.addEventListener("click", stopClick);
+
+			function follow(event) {
+				event.preventDefault();
+				let link = document.querySelector("#follow");
+				link.innerHTML = "Following";
+			}
+
+			let followLink = document.querySelector("#follow");
+			followLink.addEventListener("click", follow);
 		</script>
 	</body>
 </html>
