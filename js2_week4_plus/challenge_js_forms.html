@@ -75,13 +75,24 @@ h3 {
       
 		<script>
 //challenge 1
-      function alertButton (event){
+      function alertButton (){
        
         alert("Hooray");
       }
       let buttonSpecial = document.querySelector("#special-button");
       console.log(buttonSpecial);
       buttonSpecial.addEventListener("click", alertButton);
+
+      //challenge 2
+
+      function psInput(event){
+        event.preventDefault();
+        let psinput = document.querySelector("#password-input");
+        console.log(psinput.value);
+
+      }
+      let passwordInput = document.querySelector("#password-form");
+      passwordInput.addEventListener("submit", psInput);
     </script>
 	</body>
 </html>
