@@ -22,7 +22,7 @@
 
 		<ul>
 			<li class="country">France 🇫🇷</li>
-			<li class="country">USA 🇺🇸</li>
+			<li class="country" id="test">USA 🇺🇸</li>
 			<li class="country special" id="special">Portugal 🇵🇹</li>
 		</ul>
 
@@ -30,11 +30,15 @@
 			let special = document.querySelector("#special");
 
 			console.log(special);
-			//manipulate html
-			special.innerHTML = "Canada";
+			//manipulate html and inject strong or ul li
+			special.innerHTML = "<strong> Canada </strong>";
 
 			let countries = document.querySelectorAll("li.country");
 			console.log(countries);
+
+			let test = document.querySelector("#test");
+			console.log(test);
+			test.innerHTML = "<ul><li> Thailand </li> <li> Japan </li> </ul>";
 
 			//add classes from js
 			special.classList.add("special");
