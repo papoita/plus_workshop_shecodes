@@ -11,7 +11,11 @@
 	<body>
 		<h1>
 			Js
-			<a href="https://developer.mozilla.org/en-US/docs/Web/Events">Events</a>
+			<a
+				href="https://developer.mozilla.org/en-US/docs/Web/Events"
+				id="event-link"
+				>Events</a
+			>
 		</h1>
 		<p>click mouseenter mouseleave mousedown mouseup mousemove keydown keyup</p>
 		<script>
@@ -20,7 +24,7 @@
 				let answer = prompt("Why do you want to learn events?");
 				alert("ok we will be in touch");
 			}
-			let heading = document.querySelector("h1");
+			let heading = document.querySelector("#event-link");
 			console.log(heading);
 			heading.addEventListener("click", stopClick);
 		</script>
