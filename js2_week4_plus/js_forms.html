@@ -10,7 +10,8 @@
 	</head>
 	<body>
 		<h1>JS FormS</h1>
-		<form>
+		<h2>Searching for PAris</h2>
+		<form id="search-form">
 			<input
 				type="text"
 				placeholder="Search for a city"
@@ -20,6 +21,13 @@
 
 			<input type="submit" value="search" />
 		</form>
-		<script></script>
+		<script>
+			function search() {
+				alert("searching");
+			}
+
+			let form = document.querySelector("#search-form");
+			form.addEventListener("submit", search);
+		</script>
 	</body>
 </html>
