@@ -1,0 +1,29 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>
+			Js
+			<a href="https://developer.mozilla.org/en-US/docs/Web/Events">Events</a>
+		</h1>
+		<p>click mouseenter mouseleave mousedown mouseup mousemove keydown keyup</p>
+		<script>
+			function stopClick(event) {
+				event.preventDefault();
+				let answer = prompt("Why do you want to learn events?");
+				alert("ok we will be in touch");
+			}
+			let heading = document.querySelector("h1");
+			console.log(heading);
+			heading.addEventListener("click", stopClick);
+		</script>
+	</body>
+</html>
+<!-- @format -->
