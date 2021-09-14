@@ -94,6 +94,22 @@ h3 {
       }
       let passwordInput = document.querySelector("#password-form");
       passwordInput.addEventListener("submit", psInput);
+
+      //challenge 3
+function signUp (){
+   //event.preventDefault();
+   let email = document.querySelector("#email-input");
+   console.log(email.value);
+
+let username = document.querySelector("#username-input");
+console.log(username.value);
+alert (`Your email is ${email.value} and your username is ${username.value} `);
+}
+     
+
+let sign = document.querySelector("#signup-form");
+sign.addEventListener("submit", signUp );
+
     </script>
 	</body>
 </html>
