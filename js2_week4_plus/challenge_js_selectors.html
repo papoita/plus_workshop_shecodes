@@ -23,13 +23,17 @@
 		<ul>
 			<li class="country">France 🇫🇷</li>
 			<li class="country">USA 🇺🇸</li>
-			<li class="country" id="special">Portugal 🇵🇹</li>
+			<li class="country special" id="special">Portugal 🇵🇹</li>
 		</ul>
 
 		<script>
-			let special = document.querySelectorAll("#special");
+			let special = document.querySelector("#special");
 
 			console.log(special);
+			special.innerHTML = "Canada";
+
+			let countries = document.querySelectorAll("li.country");
+			console.log(countries);
 		</script>
 	</body>
 </html>
