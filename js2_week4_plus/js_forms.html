@@ -28,7 +28,12 @@
 				let searchInput = document.querySelector("#search-text-input");
 				console.log(searchInput.value);
 				let h2 = document.querySelector("h2");
-				h2.innerHTML = `Searching for ${searchInput.value}...`;
+				if (searchInput.value) {
+					h2.innerHTML = `Searching for ${searchInput.value}...`;
+				} else {
+					h2.innerHTML = null;
+					alert("Please type a city");
+				}
 			}
 
 			let form = document.querySelector("#search-form");
