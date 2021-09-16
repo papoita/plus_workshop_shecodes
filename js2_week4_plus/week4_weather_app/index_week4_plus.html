@@ -1,0 +1,235 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+			crossorigin="anonymous"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montaga&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/91cc94fb16.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="src/style_week4_plus.css" />
+		<title>Papos weather app</title>
+	</head>
+	<body>
+		<div class="container">
+				<video autoplay muted loop id="myVideo">
+				<source src="media/sky.mp4" type="video/mp4" />
+			</video>
+			
+		
+						<div class="row name">
+				<h1>	Papo's WEATHER APP</h1>
+						</div>
+			
+
+			<div class="row mt-2">
+				<div class="col-md-6 align-self-center">
+					<div class="card border-warning">
+						<div class= "row-4">
+						<div class="card-body">
+							<div class = "card-header text-center border-warning">
+ 
+							
+								<h4 >
+							Check the Weather from
+						</h4>
+									
+									
+							<form class="form-inline text-center"
+							id="city-form">
+							
+								<br>
+									<input type="text" id="city-input" placeholder="Enter City" required>
+						
+
+								<button type="submit" class="btn btn-warning my-1 font" id="Search">
+									Search
+								</button>
+							</form>
+							
+							</div>
+		</div>		
+</div>
+<h2 class="hard-text text-center"></h2>
+						<h3 class="hard-text text-center" id="date"></h3>
+
+						<i class="fas fa-sun sun"></i>
+						<h4 class="hard-text text-center temp" id="temp-input" >  
+							25  °C
+							<button class="a2" id="fahrenheit">°F</button>
+							
+						</h4>
+					</div>
+				</div>
+				</div>
+
+				<div class="col-md-6 align-self-center">
+					<div class="card mt-2 border-warning ">
+						<h4 class="card-header text-center border-warning">
+							8-Day Weather Forecast
+						</h4>
+						<div class="card-body">
+							<div class="row border">
+								<div class="col-3 border">
+									<div class="row">
+										<div class="col text-center mt-2">
+											<span class="icon">☀️</span>
+										</div>
+										<div class="col">
+											<h5 class="card-title mt-2">23°C</h5>
+
+											<span>Thursday</span>
+
+											<span>Sept 2</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-3 border">
+									<div class="row">
+										<div class="col text-center mt-2">
+											<span class="icon">☀️</span>
+										</div>
+										<div class="col">
+											<h5 class="card-title mt-2">23°C</h5>
+
+											<span>Thursday</span>
+
+											<span>Sept 2</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-3 border">
+									<div class="row">
+										<div class="col text-center mt-2">
+											<span class="icon">☀️</span>
+										</div>
+										<div class="col">
+											<h5 class="card-title mt-2">23°C</h5>
+
+											<span>Thursday</span>
+
+											<span>Sept 2</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-3 border">
+									<div class="row">
+										<div class="col text-center mt-2">
+											<span class="icon">☀️</span>
+										</div>
+										<div class="col">
+											<h5 class="card-title mt-2">23°C</h5>
+
+											<span>Thursday</span>
+
+											<span>Sept 2</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row border">
+								<div class="col-3 border">
+									<div class="row">
+										<div class="col text-center mt-2">
+											<span class="icon">☀️</span>
+										</div>
+										<div class="col">
+											<h5 class="card-title mt-2">23°C</h5>
+
+											<span>Thursday</span>
+
+											<span>Sept 2</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-3 border">
+									<div class="row">
+										<div class="col text-center mt-2">
+											<span class="icon">☀️</span>
+										</div>
+										<div class="col">
+											<h5 class="card-title mt-2">23°C</h5>
+
+											<span>Thursday</span>
+
+											<span>Sept 2</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-3 border">
+									<div class="row">
+										<div class="col text-center mt-2">
+											<span class="icon">☀️</span>
+										</div>
+										<div class="col">
+											<h5 class="card-title mt-2">23°C</h5>
+
+											<span>Thursday</span>
+
+											<span>Sept 2</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-3 border">
+									<div class="row">
+										<div class="col text-center mt-2">
+											<span class="icon">☀️</span>
+										</div>
+										<div class="col">
+											<h5 class="card-title mt-2">23°C</h5>
+
+											<span>Thursday</span>
+
+											<span>Sept 2</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							</div>
+							</div>
+				</div>
+							
+			</div>
+			
+
+		<div class = "row ">
+			<div class ="col text-center">
+			<div class ="card mt-2 border-warning">
+				
+					<footer class="footer font">
+							
+<a href="https://github.com/papoita/awesome-weather-app" target="_blank">Open-source code by </a>
+		
+						<a
+							href="https://www.linkedin.com/in/perezleivapaola/"
+							target="_blank"
+							class="linkedin"
+						>
+							Paola Perez
+						</a>
+		
+			</div>
+			</div>
+			</div>
+						</div>
+					</div>
+			
+		<script src="src/app_week4_plus.js"></script>
+	</body>
+</html>
