@@ -1,0 +1,108 @@
+/** @format */
+
+body {
+	background-size: cover;
+	width: auto;
+	height: auto;
+	font-family: "Montaga";
+}
+#myVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0px;
+	min-width: 100%;
+	min-height: 100%;
+	opacity: 0.7;
+}
+
+.name {
+	font-size: 40px;
+	background-color: transparent;
+	text-align: center;
+	display: block;
+}
+
+h1 {
+	text-align: center;
+	color: black;
+	font-size: 40px;
+	font-family: "Montaga", serif;
+	border-radius: 8px;
+}
+
+h2 {
+	font-size: 40px;
+	font-family: "Montaga", serif;
+	opacity: 0.9;
+	font-weight: 400;
+}
+
+h3 {
+	font-size: 25px;
+	font-family: "Montaga", serif;
+}
+h4 {
+	font-size: 20px;
+	font-family: "Montaga", serif;
+}
+span {
+	font-family: "Montaga", serif;
+	font-size: 20px;
+}
+
+.icon {
+	font-size: 50px;
+}
+.sun {
+	font-size: 110px;
+	text-align: center;
+	display: block;
+}
+
+.font {
+	font-family: "Montaga", serif;
+}
+
+.label {
+	font-size: 35px;
+}
+.currentcity {
+	text-align: center;
+}
+
+.flag {
+	font-size: 50px;
+}
+
+footer {
+	text-align: center;
+	padding: 10px;
+	border-top: 10px;
+	font-size: 15px;
+	line-height: 20px;
+}
+.linkedin {
+	color: black;
+	text-decoration: none;
+
+	text-align: center;
+}
+.linkedin:hover {
+	color: orange;
+	cursor: pointer;
+}
+
+.temp {
+	line-height: 80px;
+	font-size: 50px;
+}
+
+.a1 {
+	font-size: 20px;
+	line-height: 25px;
+}
+
+.a2 {
+	font-size: 20px;
+	line-height: 25px;
+}
