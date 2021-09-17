@@ -1,0 +1,45 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>AJAX tools for developers to connect with apis</h1>
+    <p>
+      Json placeholder to test the APIs
+      <a href="https://jsonplaceholder.typicode.com/">link to json plceholder</a>
+    </p>
+    <p>Use axios library
+      <a href="https://github.com/axios/axios">
+      Import axios to project</a>
+      <p>"sript src="https://unpkg.com/axios/dist/axios.min.js" within script in html copy th line code in installing <strong>cdn</strong>  within github put it in the head</p>
+    </p>
+    <p id = "user-name"> user's name</p>
+    <p id="all-data"> all data</p>
+    <script>
+
+      function displayUserName (response){
+        console.log(response.data.name);
+let username =document.querySelector("#user-name");
+username.innerHTML = `Hey ${response.data.name}`
+      }
+
+      function allData(response){
+ console.log(response);
+let data =document.querySelector("#all-data");
+data.innerHTML = `Hey ${response.data.name}`
+      }
+      let apiUrl = "https://jsonplaceholder.typicode.com/users/1";
+      //if I wanted to get all data I would do
+      // let apiUrl = "https://jsonplaceholder.typicode.com/users";
+      axios.get(apiUrl).then(displayUserName);
+      axios.get(apiUrl).then(allData);
+    </script>
+	</body>
+</html>
