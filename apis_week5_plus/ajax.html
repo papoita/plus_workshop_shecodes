@@ -23,23 +23,30 @@
     <p id = "user-name"> user's name</p>
     <p id="all-data"> all data</p>
     <script>
-
+/*
       function displayUserName (response){
         console.log(response.data.name);
 let username =document.querySelector("#user-name");
 username.innerHTML = `Hey ${response.data.name}`
       }
+    let apiUrl = "https://jsonplaceholder.typicode.com/users/1";
+        axios.get(apiUrl).then(displayUserName);
+         */
+ //if I wanted to get all data I would do apiURL2
 
       function allData(response){
  console.log(response);
 let data =document.querySelector("#all-data");
-data.innerHTML = `Hey ${response.data.name}`
+data.innerHTML = `Hey ${response.data[0].name}`
       }
-      let apiUrl = "https://jsonplaceholder.typicode.com/users/1";
-      //if I wanted to get all data I would do
-      // let apiUrl = "https://jsonplaceholder.typicode.com/users";
-      axios.get(apiUrl).then(displayUserName);
+  
+     
+       let apiUrl = "https://jsonplaceholder.typicode.com/users";
+    
       axios.get(apiUrl).then(allData);
+
+      
+     
     </script>
 	</body>
 </html>
