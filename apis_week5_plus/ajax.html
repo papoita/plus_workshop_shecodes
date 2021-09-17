@@ -35,9 +35,12 @@ username.innerHTML = `Hey ${response.data.name}`
  //if I wanted to get all data I would do apiURL2
 
       function allData(response){
- console.log(response);
-let data =document.querySelector("#all-data");
-data.innerHTML = `Hey ${response.data[0].name}`
+ //console.log(response);
+let p =document.querySelector("#all-data");
+response.data.forEach (user=>{
+console.log(user.username);
+});
+p.innerHTML = `Hey ${response.data[0].username}`;
       }
   
      
@@ -45,7 +48,9 @@ data.innerHTML = `Hey ${response.data[0].name}`
     
       axios.get(apiUrl).then(allData);
 
-      
+
+
+
      
     </script>
 	</body>
