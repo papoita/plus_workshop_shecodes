@@ -14,11 +14,14 @@
 		<h1>Weather api</h1>
 		<div id="temperature"></div>
 		<script>
-			let apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=New York";
+			let apiUrl =
+				"https://api.openweathermap.org/data/2.5/weather?q=New York&units=metric";
 			let apiKey = "e5a0575f79b50c1c54628c5ec48ba5bd";
 
 			function showTemperature(response) {
-				console.log(response);
+				console.log(response.data.main);
+				let temperature = document.querySelector("#temperature");
+				temperature.innerHTML = response.data.main.temp;
 			}
 			axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
 		</script>
