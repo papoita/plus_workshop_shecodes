@@ -17,6 +17,7 @@
 	</head>
 	<body>
 		<h1>Weather api</h1>
+		<h2 id="city"></h2>
 		<div id="temperature"></div>
 		<p id="temperature-description"></p>
 		<script>
@@ -32,7 +33,10 @@
 				temperatureElement.innerHTML = `${temperature} °C`;
 				description.innerHTML = response.data.weather[0].description;
 			}
+
 			axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
+			let citySelected = document.querySelector("#city");
+			citySelected.innerHTML = city;
 		</script>
 	</body>
 </html>
