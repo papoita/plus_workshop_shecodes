@@ -9,10 +9,16 @@
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 		<title>Document</title>
+		<style>
+			p {
+				text-transform: capitalize;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>Weather api</h1>
 		<div id="temperature"></div>
+		<p id="temperature-description"></p>
 		<script>
 			let city = "London";
 			let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q= ${city}&units=metric`;
@@ -20,9 +26,11 @@
 
 			function showTemperature(response) {
 				console.log(response.data.main);
+				let description = document.querySelector("#temperature-description");
 				let temperature = Math.round(response.data.main.temp);
 				let temperatureElement = document.querySelector("#temperature");
 				temperatureElement.innerHTML = `${temperature} °C`;
+				description.innerHTML = response.data.weather[0].description;
 			}
 			axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
 		</script>
