@@ -19,6 +19,14 @@
 			let apiUrl = "https://jsonplaceholder.typicode.com/comments";
 
 			axios.get(apiUrl).then(comments);
+
+			//when dealing with an object directly: if the api was specifically an object
+			function commentsArray(response) {
+				console.log(response.data.email);
+			}
+			let apiUrl1 = "https://jsonplaceholder.typicode.com/comments/1";
+
+			axios.get(apiUrl1).then(commentsArray);
 		</script>
 	</body>
 </html>
