@@ -20,7 +20,7 @@
 			function showTemperature(response) {
 				console.log(response);
 			}
-			axios.get(apiUrl).then(showTemperature);
+			axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
 		</script>
 	</body>
 </html>
