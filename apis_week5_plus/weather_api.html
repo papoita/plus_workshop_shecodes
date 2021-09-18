@@ -20,8 +20,9 @@
 
 			function showTemperature(response) {
 				console.log(response.data.main);
-				let temperature = document.querySelector("#temperature");
-				temperature.innerHTML = response.data.main.temp;
+				let temperature = Math.round(response.data.main.temp);
+				let temperatureElement = document.querySelector("#temperature");
+				temperatureElement.innerHTML = `${temperature} °C`;
 			}
 			axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
 		</script>
