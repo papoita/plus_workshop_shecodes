@@ -66,8 +66,10 @@
 			function showTemp(response) {
 				let temperature = Math.round(response.data.main.temp);
 				console.log(temperature);
+				let city = response.data.name;
+				console.log(city);
 				let h1 = document.querySelector("#current-temp");
-				h1.innerHTML = `It is ${temperature} degrees in Sydney`;
+				h1.innerHTML = `It is ${temperature} degrees in ${city}`;
 			}
 
 			axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
