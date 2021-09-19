@@ -60,7 +60,8 @@
 			let city = "sydney";
 			let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q= ${city}&units=metric`;
 			let apiKey = "apikey";
-			//replace apiKey with secret personal key before loading!
+			//replace apiKey with secret personal key before loading
+			//https://home.openweathermap.org/api_keys
 
 			function showTemp(response) {
 				let temperature = Math.round(response.data.main.temp);
