@@ -3,8 +3,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>SheCodes Plus</title>
 		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+		<title>Document</title>
 	</head>
 	<style>
 		body {
@@ -32,8 +36,7 @@
 		}
 	</style>
 	<body>
-		<img src="images/logo.png" alt="She Codes Plus Logo" class="logo" />
-		<h1>JavaScript Open Weather API</h1>
+		<h1 id="current-temp">JavaScript Open Weather API</h1>
 
 		<h3>JS Challenge 1</h3>
 		<p>Import Axios</p>
@@ -53,6 +56,21 @@
 			degrees in Sydney
 		</p>
 
-		<script></script>
+		<script>
+			let city = "sydney";
+			let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q= ${city}&units=metric`;
+			let apiKey = "apikey";
+			//replace apiKey with secret personal key before loading!
+
+			function showTemp(response) {
+				let temperature = Math.round(response.data.main.temp);
+				console.log(temperature);
+				let h1 = document.querySelector("#current-temp");
+				h1.innerHTML = `It is ${temperature} degrees in Sydney`;
+			}
+
+			axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
+			console.log();
+		</script>
 	</body>
 </html>
