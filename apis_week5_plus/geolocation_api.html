@@ -21,10 +21,12 @@
 
 	<body>
 		<h1>Geolocation API</h1>
+		<h2>weather</h2>
 		<p>
 			type in console navigator will give you information about your cmputer
 		</p>
 		<button>current location</button>
+		<button id="button2">get weather</button>
 	</body>
 
 	<script>
@@ -32,13 +34,14 @@
 			let h1 = document.querySelector("h1");
 			h1.innerHTML = `Your Latitude is ${position.coords.latitude} and your longitude is ${position.coords.longitude}`;
 			console.log(position);
+			let lon = position.coords.longitude;
 			let lat = position.coords.latitude;
 			console.log(lat);
-			let lon = position.coords.longitude;
+
 			console.log(lon);
 		}
 
-		function getcurrentPosition() {
+		function getCurrentPosition() {
 			navigator.geolocation.getCurrentPosition(showPosition);
 		}
 
@@ -46,25 +49,29 @@
 		button.addEventListener("click", getCurrentPosition);
 
 		//let city = "sydney";
-		let apiKey = "apikey";
+		let apiKey = "api key";
 		//replace apiKey with secret personal key before loading
 		//https://home.openweathermap.org/api_keys
 		let units = "metric";
 		//let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q= ${city}&units=${units}`;
 		//use this apiUrl modification to get user's lat and long
 		let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat={${lat}}&lon={${lon}}&units=${units}`;
-
+		/*trying to get bpth weather and geolocation in the same script
+still doesn't work
 		function showTemp(response) {
 			let temperature = Math.round(response.data.main.temp);
 			console.log(temperature);
 			let city = response.data.name;
 			console.log(city);
-			let h1 = document.querySelector("#current-temp");
-			h1.innerHTML = `It is ${temperature} degrees in latitude ${lat} and longitude ${lon}`;
+			let h2 = document.querySelector("h2");
+			h2.innerHTML = `It is ${temperature} degrees in latitude ${lat} and longitude ${lon}`;
 		}
-
 		axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
 		console.log();
+
+		let button2 = document.querySelector("#button2");
+		button2.addEventListener("click", showTemp);
+    */
 	</script>
 </html>
 <!-- @format -->
