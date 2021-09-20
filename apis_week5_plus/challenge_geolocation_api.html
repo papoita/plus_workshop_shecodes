@@ -1,0 +1,56 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<title>Document</title>
+		<style>
+			button {
+				display: block;
+				margin: 0 auto;
+				background: rgb(223, 44, 223);
+				color: white;
+				padding: 10px 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>Geolocation API weather</h1>
+	</body>
+	<script>
+		//challenge 1 show lat and lon
+		function showPosition(position) {
+			let lon = position.coords.longitude;
+			let lat = position.coords.latitude;
+			console.log(lat);
+			console.log(lon);
+		}
+
+		navigator.geolocation.getCurrentPosition(showPosition);
+
+		//challenge 2 - show current weather
+		let apiKey = "api key";
+		//replace apiKey with secret personal key before loading
+		//https://home.openweathermap.org/api_keys
+		let units = "metric";
+
+		let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat={${lat}}&lon={${lon}}&units=${units}`;
+
+		function showTemp(response) {
+			let temperature = Math.round(response.data.main.temp);
+			console.log(temperature);
+			//	let city = response.data.name;
+			//	console.log(city);
+			//	let h1 = document.querySelector("h2");
+			//	h1.innerHTML = `It is ${temperature} degrees in latitude ${lat} and longitude ${lon}`;
+		}
+		axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
+	</script>
+</html>
+<!-- @format -->
