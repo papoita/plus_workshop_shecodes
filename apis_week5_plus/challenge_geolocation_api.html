@@ -24,6 +24,14 @@
 		<h1>Geolocation API weather</h1>
 	</body>
 	<script>
+		function showTemp(response) {
+			let temperature = Math.round(response.data.main.temp);
+			console.log(temperature);
+			let city = response.data.name;
+			console.log(city);
+			let h1 = document.querySelector("h1");
+			h1.innerHTML = `The outside temperature in ${city} is ${temperature} C degrees `;
+		}
 		//challenge 1 show lat and lon
 		function showPosition(position) {
 			let lon = position.coords.longitude;
@@ -41,15 +49,6 @@
 			axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
 		}
 		navigator.geolocation.getCurrentPosition(showPosition);
-
-		function showTemp(response) {
-			let temperature = Math.round(response.data.main.temp);
-			console.log(temperature);
-			let city = response.data.name;
-			console.log(city);
-			let h1 = document.querySelector("h1");
-			h1.innerHTML = `The outside temperature in ${city} is ${temperature} C degrees `;
-		}
 	</script>
 </html>
 <!-- @format -->
