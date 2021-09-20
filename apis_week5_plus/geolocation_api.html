@@ -7,6 +7,15 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<style>
+			button {
+				display: block;
+				margin: 0 auto;
+				background: rgb(223, 44, 223);
+				color: white;
+				padding: 10px 20px;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -23,7 +32,13 @@
 			console.log(position.coords.latitude);
 			console.log(position.coords.longitude);
 		}
-		navigator.geolocation.getCurrentPosition(showPosition);
+
+		function getcurrentPosition() {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		}
+
+		let button = document.querySelector("button");
+		button.addEventListener("click", getCurrentPosition);
 	</script>
 </html>
 <!-- @format -->
