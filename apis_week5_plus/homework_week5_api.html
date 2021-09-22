@@ -23,23 +23,66 @@
 		></script>
 		<title>weather_app2</title>
 	</head>
+	<style>
+		#weather-box {
+			border: 2px solid gray;
+			padding: 15px;
+			margin: 20px auto;
+			max-width: 1000px;
+			border-radius: 20px;
+		}
+		body {
+			background-size: cover;
+			width: auto;
+			height: auto;
+			font-family: "Montaga";
+		}
+		#myVideo {
+			position: fixed;
+			right: 0;
+			bottom: 0px;
+			min-width: 100%;
+			min-height: 100%;
+			opacity: 0.7;
+		}
+
+		.name {
+			font-size: 40px;
+			background-color: transparent;
+			text-align: center;
+			display: block;
+			color: rgba(128, 128, 128);
+			padding: 20px;
+		}
+	</style>
 	<body>
 		<div class="container">
-			<div class="weather-app">
+			<div class="app" id="weather-box">
+				<div class="row name">
+					<h1>Papo's WEATHER APP</h1>
+				</div>
 				<form action="" class="search-form">
 					<div class="row">
-						<div class="col-2"></div>
+						<div class="col-1">
+							<button
+								class="btn btn-primary w-100"
+								id="current-location-button"
+							>
+								<i class="fas fa-map-pin"></i>
+							</button>
+						</div>
 						<div class="col-6">
 							<input
 								type="search"
-								class="type"
+								class="form-control shadow-sm"
+								id="city-input"
 								placeholder="Enter a City"
 								autofocus="on"
 								autocomplete="off"
 							/>
 						</div>
 						<div class="col-3">
-							<input type="submit" value="go" />
+							<input type="submit" class="btn btn-warning w-100" value="GO" />
 						</div>
 					</div>
 				</form>
