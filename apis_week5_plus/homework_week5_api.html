@@ -139,4 +139,31 @@
 			</div>
 		</div>
 	</body>
+	<script>
+		function showTemp(response) {
+			let temperature = Math.round(response.data.main.temp);
+			console.log(temperature);
+			let city = response.data.name;
+			console.log(city);
+			let cityHeading = document.querySelector("#city");
+			cityHeading.innerHTML = `%{city}`;
+		}
+		//challenge 1 show lat and lon
+		function showPosition(position) {
+			let lon = position.coords.longitude;
+			let lat = position.coords.latitude;
+			console.log(lat);
+			console.log(lon);
+			//challenge 2 - show current weather
+			let apiKey = "apikey";
+			//replace apiKey with secret personal key before loading
+			//https://home.openweathermap.org/api_keys
+			let units = "metric";
+
+			let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}`;
+
+			axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
+		}
+		navigator.geolocation.getCurrentPosition(showPosition);
+	</script>
 </html>
