@@ -64,9 +64,9 @@
 		}
 
 		.date {
-			font-size: 30px;
-			margin: 0px;
-			color: grey;
+			font-size: 20px;
+			margin: 10px 0;
+			color: black;
 		}
 
 		.conditions {
@@ -142,7 +142,8 @@
 					</div>
 					<div class="col-6">
 						<h4 class="hard-text temp">
-							<strong id="temp-input">19</strong> <small id="celcius">°C</small>
+							<strong id="temp-input">19</strong>
+							<small id="celcius">°C</small>
 						</h4>
 					</div>
 				</div>
@@ -151,6 +152,55 @@
 	</body>
 	<script>
 		let apiKey = "apiKey";
+
+		//date
+		function formatDate(date) {
+			let hours = date.getHours();
+			if (hours < 10) {
+				hours = `0${hours}`;
+			}
+
+			let minutes = date.getMinutes();
+			if (minutes < 10) {
+				minutes = `0${minutes}`;
+			}
+			let year = date.getFullYear();
+			let days = [
+				"Sunday",
+				"Monday",
+				"Tuesday",
+				"Wednesday",
+				"Thursday",
+				"Friday",
+				"Saturday",
+			];
+			let day = days[date.getDay()]; //0 and 6
+
+			let months = [
+				"January",
+				"February",
+				"March",
+				"April",
+				"May",
+				"June",
+				"July",
+				"August",
+				"September",
+				"October",
+				"November",
+				"December",
+			];
+			let month = months[currentTime.getMonth()];
+			let dates = currentTime.getDate();
+
+			console.log(hours, minutes);
+			return `${hours}:${minutes} <br/> ${day} <br> ${month}, ${dates}`;
+		}
+		let dateElement = document.querySelector("#date");
+		let currentTime = new Date();
+
+		dateElement.innerHTML = formatDate(currentTime);
+
 		//Works for button click current location
 		function showTemp(response) {
 			let temperature = Math.round(response.data.main.temp);
