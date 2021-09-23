@@ -89,7 +89,7 @@
 		}
 		.temp {
 			line-height: 80px;
-			font-size: 70px;
+			font-size: 90px;
 		}
 		#celcius {
 			font-size: 30px;
@@ -138,7 +138,7 @@
 					<div class="col-6">
 						<h3 class="hard-text conditions" id="conditions">Conditions</h3>
 						<h3 class="hard-text humidity" id="humidity">Humidity</h3>
-						<h3 class="hard-text wind" id="wind">Wind</h3>
+						<h3 class="hard-text wind" id="feels">Feels like</h3>
 					</div>
 					<div class="col-6">
 						<h4 class="hard-text temp">
@@ -150,6 +150,7 @@
 		</div>
 	</body>
 	<script>
+		let apiKey = "apiKey";
 		//Works for button click current location
 		function showTemp(response) {
 			let temperature = Math.round(response.data.main.temp);
@@ -160,6 +161,19 @@
 			console.log(city);
 			let cityHeading = document.querySelector("#city");
 			cityHeading.innerHTML = `${city.toUpperCase()}`;
+			console.log(response);
+			let humidity = response.data.main.humidity;
+			console.log(humidity);
+			let conditions = response.data.weather[0].description;
+			console.log(conditions);
+			let feels = response.data.main.feels_like;
+			console.log(feels);
+			let humidityHeading = document.querySelector("#humidity");
+			humidityHeading.innerHTML = `Humidity: ${humidity} %`;
+			let conditionsHeading = document.querySelector("#conditions");
+			conditionsHeading.innerHTML = `${conditions}`;
+			let feelsHeading = document.querySelector("#feels");
+			feelsHeading.innerHTML = `Feels like: ${feels} °C`;
 		}
 		//show position based on current location lat and lon
 		function showPosition(position) {
@@ -168,7 +182,7 @@
 			console.log(lat);
 			console.log(lon);
 			//challenge 2 - show current weather
-			let apiKey = "apiKey";
+			//let apiKey = "apiKey";
 			//replace apiKey with secret personal key before loading
 			//https://home.openweathermap.org/api_keys
 			let units = "metric";
@@ -198,7 +212,7 @@
 			searchedCity.innerHTML = `${newCity.value.toUpperCase()}`;
 			console.log("ok we have city lets get weather");
 			let units = "metric";
-			let apiKey = "apikey";
+			//	let apiKey = "apiKey";
 			let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}`;
 			console.log("ok step 2");
 			axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
