@@ -164,6 +164,12 @@
 
 			axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
 		}
-		navigator.geolocation.getCurrentPosition(showPosition);
+
+		function getCurrentPosition() {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		}
+
+		let button = document.querySelector("#current-location-button");
+		button.addEventListener("click", getCurrentPosition);
 	</script>
 </html>
