@@ -91,6 +91,9 @@
 			line-height: 80px;
 			font-size: 70px;
 		}
+		#celcius {
+			font-size: 30px;
+		}
 	</style>
 	<body>
 		<div class="container">
@@ -123,7 +126,7 @@
 						</div>
 					</div>
 				</form>
-				<h2 class="hard-text text-center city" id="city">City</h2>
+				<h2 class="hard-text text-center city" id="city">Ottawa</h2>
 				<h3 class="hard-text date" id="date">Date</h3>
 
 				<div class="row">
@@ -133,7 +136,9 @@
 						<h3 class="hard-text wind" id="wind">Wind</h3>
 					</div>
 					<div class="col-6">
-						<h4 class="hard-text temp" id="temp-input">Temp</h4>
+						<h4 class="hard-text temp">
+							<strong id="temp-input">19</strong> <small id="celcius">°C</small>
+						</h4>
 					</div>
 				</div>
 			</div>
@@ -143,10 +148,12 @@
 		function showTemp(response) {
 			let temperature = Math.round(response.data.main.temp);
 			console.log(temperature);
+			let tempHeading = document.querySelector("#temp-input");
+			tempHeading.innerHTML = `${temperature}`;
 			let city = response.data.name;
 			console.log(city);
 			let cityHeading = document.querySelector("#city");
-			cityHeading.innerHTML = `%{city}`;
+			cityHeading.innerHTML = `${city.toUpperCase()}`;
 		}
 		//challenge 1 show lat and lon
 		function showPosition(position) {
@@ -155,7 +162,7 @@
 			console.log(lat);
 			console.log(lon);
 			//challenge 2 - show current weather
-			let apiKey = "apikey";
+			let apiKey = "apiKey";
 			//replace apiKey with secret personal key before loading
 			//https://home.openweathermap.org/api_keys
 			let units = "metric";
@@ -165,11 +172,13 @@
 			axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
 		}
 
-		function getCurrentPosition() {
+		function showLocation(event) {
+			event.preventDefault();
+			console.log("wearehere-we made it!yuhu!");
 			navigator.geolocation.getCurrentPosition(showPosition);
 		}
 
 		let button = document.querySelector("#current-location-button");
-		button.addEventListener("click", getCurrentPosition);
+		button.addEventListener("click", showLocation);
 	</script>
 </html>
