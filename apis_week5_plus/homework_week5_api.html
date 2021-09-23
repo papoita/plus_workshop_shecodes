@@ -54,6 +54,42 @@
 			color: rgba(128, 128, 128);
 			padding: 20px;
 		}
+		.city {
+			font-size: 40px;
+			opacity: 0.9;
+			color: rgb(62, 59, 59);
+			font-weight: 400;
+			margin-top: 20px;
+		}
+
+		.date {
+			font-size: 25px;
+			margin: 0px;
+			color: grey;
+		}
+
+		.conditions {
+			font-size: 25px;
+			margin: 0px;
+			color: grey;
+		}
+		.wind {
+			font-size: 25px;
+			margin: 0px;
+			color: grey;
+		}
+		.humidity {
+			font-size: 25px;
+			margin: 0px;
+			color: grey;
+		}
+		h4 {
+			font-size: 20px;
+		}
+		.temp {
+			line-height: 80px;
+			font-size: 50px;
+		}
 	</style>
 	<body>
 		<div class="container">
@@ -61,9 +97,9 @@
 				<div class="row name">
 					<h1>Papo's WEATHER APP</h1>
 				</div>
-				<form action="" class="search-form">
+				<form class="search-form">
 					<div class="row">
-						<div class="col-1">
+						<div class="col-2">
 							<button
 								class="btn btn-primary w-100"
 								id="current-location-button"
@@ -71,7 +107,7 @@
 								<i class="fas fa-map-pin"></i>
 							</button>
 						</div>
-						<div class="col-6">
+						<div class="col-7">
 							<input
 								type="search"
 								class="form-control shadow-sm"
@@ -86,6 +122,18 @@
 						</div>
 					</div>
 				</form>
+				<h2 class="hard-text text-center city" id="city">City</h2>
+				<h3 class="hard-text date" id="date">Date</h3>
+				<h3 class="hard-text conditions" id="conditions">Conditions</h3>
+				<div class="row">
+					<div class="col-6">
+						<h3 class="hard-text humidity" id="humidity">Humidity</h3>
+						<h3 class="hard-text wind" id="wind">Wind</h3>
+					</div>
+					<div class="col-6">
+						<h4 class="hard-text temp" id="temp-input">Temp</h4>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>
