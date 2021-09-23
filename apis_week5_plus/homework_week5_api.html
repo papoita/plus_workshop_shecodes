@@ -21,7 +21,8 @@
 			src="https://kit.fontawesome.com/91cc94fb16.js"
 			crossorigin="anonymous"
 		></script>
-		<title>weather_app2</title>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<title>paposweather_app2</title>
 	</head>
 	<style>
 		#weather-box {
@@ -63,23 +64,23 @@
 		}
 
 		.date {
-			font-size: 25px;
+			font-size: 30px;
 			margin: 0px;
 			color: grey;
 		}
 
 		.conditions {
-			font-size: 25px;
+			font-size: 20px;
 			margin: 0px;
 			color: grey;
 		}
 		.wind {
-			font-size: 25px;
+			font-size: 20px;
 			margin: 0px;
 			color: grey;
 		}
 		.humidity {
-			font-size: 25px;
+			font-size: 20px;
 			margin: 0px;
 			color: grey;
 		}
@@ -88,7 +89,7 @@
 		}
 		.temp {
 			line-height: 80px;
-			font-size: 50px;
+			font-size: 70px;
 		}
 	</style>
 	<body>
@@ -124,9 +125,10 @@
 				</form>
 				<h2 class="hard-text text-center city" id="city">City</h2>
 				<h3 class="hard-text date" id="date">Date</h3>
-				<h3 class="hard-text conditions" id="conditions">Conditions</h3>
+
 				<div class="row">
 					<div class="col-6">
+						<h3 class="hard-text conditions" id="conditions">Conditions</h3>
 						<h3 class="hard-text humidity" id="humidity">Humidity</h3>
 						<h3 class="hard-text wind" id="wind">Wind</h3>
 					</div>
